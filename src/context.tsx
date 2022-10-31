@@ -25,7 +25,7 @@ export type CocktailProp = {
 const AppContext = React.createContext({} as AppContextProps);
 
 const AppProvider = ({ children }: AppProviderProps) => {
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [searchTerm, setSearchTerm] = useState<string>("a");
   const [cocktails, setCocktails] = useState<[]>([]);
 
