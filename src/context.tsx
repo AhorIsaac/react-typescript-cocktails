@@ -18,7 +18,7 @@ export type CocktailProp = {
   image: string;
   name: string;
   info: string;
-  id: string | number;
+  id: string;
   glass: string;
 };
 
@@ -48,10 +48,13 @@ const AppProvider = ({ children }: AppProviderProps) => {
           };
         });
         setCocktails(newCocktails);
+        setLoading(false);
       } else {
         setCocktails([]);
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log("🚀 ~ file: context.tsx ~ line 56 ~ fetchDrinks ~ error", error)
+    }
   }, [searchTerm]);
 
   useEffect(() => {
