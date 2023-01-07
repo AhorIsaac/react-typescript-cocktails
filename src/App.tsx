@@ -10,7 +10,9 @@ import Error from "./pages/Error";
 // import components
 import Navbar from "./components/Navbar";
 
-const App = () => {
+export interface IApp {}
+
+const App: React.FC<IApp> = () : React.ReactElement => {
   return (
     <Router>
       <Navbar />

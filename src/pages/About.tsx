@@ -1,6 +1,8 @@
 import React from "react";
 
-const About = () => {
+export interface IAbout {}
+
+const About: React.FC<IAbout> = (): React.ReactElement => {
   return (
     <section className="section about-section">
       <h1 className="section-title">about us</h1>

@@ -3,7 +3,9 @@ import Cocktail from "./Cocktail";
 import Loading from "./Loading";
 import { useGlobalContext } from "../context";
 
-const CocktailList = () => {
+export interface ICocktailList {}
+
+const CocktailList: React.FC<ICocktailList> = (): React.ReactElement => {
   const { loading, cocktails } = useGlobalContext();
 
   if (loading) {

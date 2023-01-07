@@ -17,7 +17,7 @@ Variables
   --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.2);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainBorderRadius: 0.25rem;
   --smallWidth: 85vw;
@@ -29,6 +29,12 @@ Variables
 Global Styles 
 ======
 */
+
+@font-face {
+  font-family: Kunika;
+  src: url("./assets/fonts/Kunika.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,13 +42,15 @@ Global Styles
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  font-family: Kunika, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--mainBlack);
   background: var(--mainBackground);
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
+  scrollbar-width: thin;
+  scrollbar-color: #e7f4fa #e4e4e4;
 }
 h1,
 h2,
@@ -302,6 +310,10 @@ Form
   border-radius: var(--mainBorderRadius);
   padding: 0.5rem;
   font-size: 1.2rem;
+  outline: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #14a73e98;
+  border-bottom-style: solid;
 }
 /* 
 ====== 
@@ -408,4 +420,79 @@ Cocktail
     box-shadow: 0 -2em;
     height: 5em;
   }
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f8f9fa;
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: conic-gradient(left 180deg, #ecdee3, #e6dde3);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #d9e7ef;
+  border-radius: 200px;
+  border: 2px solid rgb(227, 221, 221);
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* CSS */
+.button-88 {
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+.continuous-5 {
+  width: 160px;
+  height: 40px;
+  margin: 24px auto;
+  background: 
+    linear-gradient(#25b09b 0 0) left -80px top 0/80px 40px,
+    linear-gradient(#ddd 0 0) center/100% 50%; 
+  background-repeat: no-repeat;
+  animation: ct5 1s infinite linear;
+}
+
+@keyframes ct5 {
+100% {background-position: right -40px top 0,center}
 }

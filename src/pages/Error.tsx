@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Error = () => {
+export interface IError {}
+
+const Error: React.FC<IError> = (): React.ReactElement => {
   return (
     <section className="error-page section">
       <div className="error-container">

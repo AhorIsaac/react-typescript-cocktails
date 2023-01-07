@@ -1,8 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../logo.svg'
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../logo.svg";
 
-const Navbar = () => {
+export interface INavbar {}
+
+const Navbar: React.FC<INavbar> = (): React.ReactElement => {
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -11,19 +13,15 @@ const Navbar = () => {
         </Link>
         <ul className="nav-links">
           <li>
-            <Link to="/">
-              Home 
-            </Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">
-              About 
-            </Link>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

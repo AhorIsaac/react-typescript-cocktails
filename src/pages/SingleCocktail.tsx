@@ -79,7 +79,7 @@ const SingleCocktail = () => {
 
   return (
     <section className="section cocktail-section">
-      <Link to="/" className="btn btn-primary">
+      <Link to="/" className="button-88">
         back home
       </Link>
       <h2 className="section-title">{name}</h2>

@@ -53,7 +53,10 @@ const AppProvider = ({ children }: AppProviderProps) => {
         setCocktails([]);
       }
     } catch (error) {
-      console.log("🚀 ~ file: context.tsx ~ line 56 ~ fetchDrinks ~ error", error)
+      console.log(
+        "🚀 ~ file: context.tsx ~ line 56 ~ fetchDrinks ~ error",
+        error
+      );
     }
   }, [searchTerm]);
 
